@@ -1,5 +1,4 @@
 # Word Frequency Counter – Sequential, Parallel (TBB), and Concurrent (Pthreads)
-<br>
 This project implements a word frequency counter in three different ways:
 
 1. **Sequential version**: single thread baseline  
