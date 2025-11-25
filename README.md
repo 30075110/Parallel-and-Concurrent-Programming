@@ -1,5 +1,5 @@
 # Word Frequency Counter – Sequential, Parallel (TBB), and Concurrent (Pthreads)
-
+<br>
 This project implements a word frequency counter in three different ways:
 
 1. **Sequential version**: single thread baseline  
@@ -10,10 +10,9 @@ This project implements a word frequency counter in three different ways:
 
 Each program reads a text file, normalises the words, counts their frequency, and outputs the top **N** most frequent words along with timing information.
 
-
+---
 
 ## Files
-
 ### 1. Sequential
 - Source: `wordCountSeq.cpp`  
 
@@ -23,10 +22,9 @@ Each program reads a text file, normalises the words, counts their frequency, an
 
 ### 3. Concurrent (Pthreads)
 - Source: `wordCountConcurrent.cpp`  
+<br>
 
-
-
-
+---
 
 ## Build Instructions
 
@@ -34,7 +32,6 @@ Each program reads a text file, normalises the words, counts their frequency, an
 ```bash
 g++ -std=c++11 -o seq wordCountSeq.cpp
 ```
-
 
 ### 2. Parallel (TBB)
 ```bash
@@ -51,14 +48,13 @@ g++ -std=c++11 -march=native -flto \
 g++ -std=c++11 -pthread -o conc wordCountConcurrent.cpp
 ```
 
-
+---
 
 ## Usage
 ### 1. Sequential
 ```bash
 ./seq <filename>
 ```
-
 
 ### 2. Parallel (TBB)
 ```bash
@@ -78,7 +74,7 @@ g++ -std=c++11 -pthread -o conc wordCountConcurrent.cpp
 ```bash
 ./conc smallSize.txt 6 20
 ```
-
+---
 
 ## Program Features 
 - Word normalisation (remove punctuation, convert to lowercase) 2. 
@@ -87,6 +83,8 @@ g++ -std=c++11 -pthread -o conc wordCountConcurrent.cpp
 - Timing for: **reading **counting **merging **total runtime
 - Configurable number of threads / workers
 - Top-N most frequent words output
+
+---
 
 ## Requirements 
 - Both parallel and concurrent programs automatically run the sequential version first for baseline timing.
